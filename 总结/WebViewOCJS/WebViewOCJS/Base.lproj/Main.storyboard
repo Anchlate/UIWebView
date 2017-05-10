@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HzQ-rb-uJO">
+                                <rect key="frame" x="20" y="20" width="560" height="373"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJ0-4t-eCg">
+                                <rect key="frame" x="20" y="443" width="560" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.50196078430000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hkO-oW-0Qi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LJ0-4t-eCg" firstAttribute="top" secondItem="HzQ-rb-uJO" secondAttribute="bottom" constant="50" id="5KE-eC-qTA"/>
+                            <constraint firstItem="LJ0-4t-eCg" firstAttribute="leading" secondItem="HzQ-rb-uJO" secondAttribute="leading" id="DAB-n3-RyR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HzQ-rb-uJO" secondAttribute="trailing" id="R1Q-jX-orM"/>
+                            <constraint firstItem="HzQ-rb-uJO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="dbh-Cq-1mS"/>
+                            <constraint firstItem="LJ0-4t-eCg" firstAttribute="trailing" secondItem="HzQ-rb-uJO" secondAttribute="trailing" id="fC6-Vu-G9X"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HzQ-rb-uJO" secondAttribute="bottom" constant="207" id="gA7-pR-zdG"/>
+                            <constraint firstItem="HzQ-rb-uJO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="uQ5-F6-KXP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="HzQ-rb-uJO" id="JWU-et-ewr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

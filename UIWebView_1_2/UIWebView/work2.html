@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="language" content="zh-CN" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+            <meta http-equiv="Content-Security-Policy" content="default-src *; img-src * data:; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src  'self' 'unsafe-inline' *">
+                <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+                    <meta name="format-detection" content="telephone=no">
+                        <title>WebView与原生互相调用测试</title>
+                        <style>
+                            p{
+                                float: left;
+                                display: inline-block;
+                                margin-left: 5%;
+                                width: 90%;
+                                padding: 30px 0;
+                                line-height: 22px;
+                                font-size: 14px;
+                                color: #333333;
+                            }
+                        button{
+                            float: left;
+                            margin-left: 5%;
+                            width: 90%;
+                            height: 40px;
+                            line-height: 40px;
+                            border: 0;
+                            box-sizing: border-box;
+                            background: #00aa00;
+                            color: #ffffff;
+                            font-size: 16px;
+                            text-align: center;
+                        }
+                        </style>
+                        </head>
+    <body>
+        <p>WebView调用方法 callAppFunc('showToast', '弹出这段测试文字表示成功') ，点击以下按钮触发</p>
+        <button class="btn" id="ShowToast">显示原生Toast</button>
+        <p>请调用 callWebFunc('alert', ['参数1']) 来测试对WebView的调用</p>
+        <script>
+            var callWebFunc = function (funcName, params) {
+                if (funcName == 'alert' && params.length == 1) {
+                    alert(params[0]);
+                }
+            }
+        document.getElementById('ShowToast').addEventListener('click', function () {
+                                                              anchlate.call11('123345');
+                                                              }, false)
+            </script>
+    </body>
+</html>

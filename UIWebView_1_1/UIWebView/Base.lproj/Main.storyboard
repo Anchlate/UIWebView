@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jcU-fQ-Okq">
+                                <rect key="frame" x="20" y="20" width="560" height="344"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="JNW-xc-myJ"/>
+                                </connections>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WF0-lL-rb1">
+                                <rect key="frame" x="40" y="384" width="520" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.097829651170000004" blue="0.14831643659999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="haT-Ry-1Vo"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dgH-aa-Wpo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jcU-fQ-Okq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="IW6-Bp-FqU"/>
+                            <constraint firstItem="WF0-lL-rb1" firstAttribute="top" secondItem="jcU-fQ-Okq" secondAttribute="bottom" constant="20" id="KA4-ML-xT4"/>
+                            <constraint firstItem="jcU-fQ-Okq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="TIJ-Za-lav"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WF0-lL-rb1" secondAttribute="trailing" constant="20" id="i5U-el-E3v"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jcU-fQ-Okq" secondAttribute="bottom" constant="236" id="tav-jM-Omo"/>
+                            <constraint firstItem="WF0-lL-rb1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="u5w-7l-108"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jcU-fQ-Okq" secondAttribute="trailing" id="z4P-pd-2Nv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="jcU-fQ-Okq" id="Cw4-9J-H8b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
